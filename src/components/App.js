@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./../styles/App.css";
 import TodoList from "./TodoList";
-import { useState } from "react";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -12,9 +11,12 @@ const App = () => {
 
   function handleComplete(id) {
     setTodos(
-      todos.map((todo) => (todo.id === id ? { ...todo, complete: true } : todo))
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, complete: true } : todo
+      )
     );
   }
+
   return (
     <div>
       <h1>Parent Component</h1>
