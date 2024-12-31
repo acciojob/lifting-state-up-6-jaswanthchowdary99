@@ -1,13 +1,12 @@
 import React from "react";
 
-export default function TodoList({ list, onComplete }) {
-  console.log(list);
+export default function Todotodos({ todos, onComplete }) {
   return (
     <>
       <div>
         <h2>Child Component</h2>
         <ul>
-          {list.map((todo) =>
+          {todos.map((todo) =>
             todo.complete ? (
               <li key={todo.id}>{todo.text}</li>
             ) : (

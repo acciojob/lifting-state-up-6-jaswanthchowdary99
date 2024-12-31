@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <h1>Parent Component</h1>
-      <TodoList list={todos} onComplete={handleComplete} />
+      <TodoList todos={todos} onComplete={handleComplete} />
     </div>
   );
 };
